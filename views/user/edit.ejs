@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-Health Care | Edit Patient</title>
+	<link rel="stylesheet" href="/abc/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		
+		
+	
+	
+		<form method="post" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Edit Patient Info</legend>
+				<table>
+					<tr>
+ 							<td><img style="width: 200px; height: 200px;" src="/abc/upload/<%=p_info.photo%>"></td>
+					<tr>
+								<td>Birth Date</td>
+							<td><input type="date" name="p_birth_date" value="<%=h_info.p_birth_date%>"></td>
+							</tr>	
+					</tr>
+					<tr>
+						<td>Photo</td>
+						<td><input type="file" name="file" ></td>
+					</tr>
+					<tr>
+						<td>Conatact No</td>
+						<td><input type="text" name="contactno" value="<%=p_info.contactno%>"></td>
+					</tr>
+					<tr>
+						<td>Address</td>
+						<td><input type="text" name="p_address" value="<%=h_info.p_address%>"></td>
+					</tr>
+					<tr>
+						<td>BMI</td>
+						<td><input type="text" name="p_bmi" value="<%=h_info.p_bmi%>"></td>
+					</tr>
+					<tr>
+						<td>Weight</td>
+						<td><input type="text" name="p_weight" value="<%=h_info.p_weight%>"></td>
+					</tr>
+					<tr>
+						<td>Blood Presure</td>
+						<td><input type="text" name="p_blood_p" value="<%=h_info.p_blood_p%>"></td>
+					</tr>
+					<tr>
+						<td>Calorie Intake</td>
+						<td><input type="text" name="p_cal_in" value="<%=h_info.p_cal_in%>"></td>
+					</tr>
+					
+					
+					
+					<tr>
+						<td></td>
+						<td><input type="submit" name="submit" value="Submit"></td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+
+	<script>
+		document.getElementById('upload_image').addEventListener("click", function()
+		{ 
+  			document.querySelector('.up_image').style.display = "grid";
+		});
+
+		document.getElementById('no_upload_image').addEventListener("click", function()
+		{ 
+  			document.querySelector('.up_image').style.display = "none";
+  		});
+	</script>
+</body>
+</html>
